@@ -71,10 +71,19 @@ function onStart(options) {
             streaming = true;
         }
     }, false);
+
+    configureStore
 }
+
+srConnection.on('UserConnected', (title, user, message) => {
+    const received = `title: ${title}, name: ${user}, message: ${message}`;
+    console.log(received);
+});
 
 srConnection.on("Receive", data => {
     var message = JSON.parse(data)
+
+    console.info(message);
 
     if (message.sdp) {
         if (message.sdp.type == 'offer') {
