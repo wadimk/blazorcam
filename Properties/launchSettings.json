@@ -1,6 +1,7 @@
 {
   "profiles": {
     "IIS Express": {
+      "DetailedErrors": true,
       "commandName": "IISExpress",
       "launchBrowser": true,
       "environmentVariables": {
