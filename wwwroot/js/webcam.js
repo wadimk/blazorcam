@@ -72,7 +72,6 @@ function onStart(options) {
         }
     }, false);
 
-    configureStore
 }
 
 srConnection.on('UserConnected', (title, user, message) => {
